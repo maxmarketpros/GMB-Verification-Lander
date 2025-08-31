@@ -113,7 +113,7 @@ export function FileUpload({
       
       <div
         className={cn(
-          "relative border-2 border-dashed rounded-lg p-6 transition-colors",
+          "relative border-2 border-dashed rounded-lg p-4 sm:p-6 transition-colors",
           dragActive
             ? "border-blue-400 bg-blue-50"
             : "border-gray-300 hover:border-gray-400",
@@ -133,7 +133,7 @@ export function FileUpload({
         />
         
         <div className="text-center">
-          <Upload className="mx-auto h-8 w-8 text-gray-400" />
+          <Upload className="mx-auto h-6 w-6 sm:h-8 sm:w-8 text-gray-400" />
           <div className="mt-2">
             <p className="text-sm text-gray-600">
               <span className="font-medium text-blue-600">Click to upload</span> or drag and drop
@@ -166,19 +166,19 @@ export function FileUpload({
             {value.map((file, index) => (
               <div
                 key={`${file.name}-${index}`}
-                className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                className="flex items-center justify-between p-2 sm:p-3 bg-gray-50 rounded-lg"
               >
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2 min-w-0 flex-1">
                   {getFileIcon(file)}
                   <span className="text-sm text-gray-900 truncate">{file.name}</span>
-                  <span className="text-xs text-gray-500">
+                  <span className="text-xs text-gray-500 flex-shrink-0">
                     ({Math.round(file.size / 1024)} KB)
                   </span>
                 </div>
                 <button
                   type="button"
                   onClick={() => removeFile(index)}
-                  className="text-gray-400 hover:text-red-500 transition-colors"
+                  className="text-gray-400 hover:text-red-500 transition-colors flex-shrink-0 ml-2"
                 >
                   <X className="h-4 w-4" />
                 </button>

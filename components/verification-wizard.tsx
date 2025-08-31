@@ -233,65 +233,65 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
   // Transition/Loading Screen
   if (isTransitioning) {
     return (
-      <div className="max-w-3xl mx-auto">
-        <div className="bg-gradient-to-br from-white to-blue-50 rounded-3xl shadow-2xl border border-blue-100 p-10">
-          <div className="text-center space-y-8">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6">
+        <div className="bg-gradient-to-br from-white to-blue-50 rounded-3xl shadow-2xl border border-blue-100 p-6 sm:p-10">
+          <div className="text-center space-y-6 sm:space-y-8">
             <div className="relative">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto shadow-lg">
-                <Clock className="w-10 h-10 text-white animate-pulse" />
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                <Clock className="w-8 h-8 sm:w-10 sm:h-10 text-white animate-pulse" />
               </div>
-              <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                <CheckCircle className="w-4 h-4 text-white" />
+              <div className="absolute -top-2 -right-2 w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center">
+                <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
               </div>
             </div>
             
-            <div className="space-y-4">
-              <h3 className="text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+            <div className="space-y-3 sm:space-y-4">
+              <h3 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
                 Preparing Your Verification
               </h3>
-              <p className="text-lg text-gray-600">Here's what we'll need to get you verified with Google</p>
+              <p className="text-base sm:text-lg text-gray-600">Here's what we'll need to get you verified with Google</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
-              <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-2xl mx-auto">
+              <div className="bg-white rounded-xl p-3 sm:p-4 shadow-sm border border-gray-100">
+                <div className="flex items-center space-x-2 sm:space-x-3">
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-100 rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
                   </div>
-                  <span className="font-medium text-gray-900">Business Address</span>
+                  <span className="font-medium text-gray-900 text-sm sm:text-base">Business Address</span>
                 </div>
               </div>
-              <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+              <div className="bg-white rounded-xl p-3 sm:p-4 shadow-sm border border-gray-100">
+                <div className="flex items-center space-x-2 sm:space-x-3">
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-100 rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
                   </div>
-                  <span className="font-medium text-gray-900">Business Documents</span>
+                  <span className="font-medium text-gray-900 text-sm sm:text-base">Business Documents</span>
                 </div>
               </div>
-              <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+              <div className="bg-white rounded-xl p-3 sm:p-4 shadow-sm border border-gray-100">
+                <div className="flex items-center space-x-2 sm:space-x-3">
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-100 rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
                   </div>
-                  <span className="font-medium text-gray-900">Signage Photos</span>
+                  <span className="font-medium text-gray-900 text-sm sm:text-base">Signage Photos</span>
                 </div>
               </div>
-              <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+              <div className="bg-white rounded-xl p-3 sm:p-4 shadow-sm border border-gray-100">
+                <div className="flex items-center space-x-2 sm:space-x-3">
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-100 rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
                   </div>
-                  <span className="font-medium text-gray-900">Verification History</span>
+                  <span className="font-medium text-gray-900 text-sm sm:text-base">Verification History</span>
                 </div>
               </div>
             </div>
             
-            <div className="space-y-3">
-              <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
+            <div className="space-y-2 sm:space-y-3">
+              <div className="h-2 sm:h-3 bg-gray-200 rounded-full overflow-hidden">
                 <div className="h-full bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full animate-pulse transition-all duration-2000 w-3/4"></div>
               </div>
-              <p className="text-sm text-gray-500">Setting up your verification process...</p>
+              <p className="text-xs sm:text-sm text-gray-500">Setting up your verification process...</p>
             </div>
           </div>
         </div>
@@ -300,22 +300,22 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
   }
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6">
       {/* Help Banner */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl p-6 mb-8 shadow-lg">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-              <Phone className="w-6 h-6 text-white" />
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8 shadow-lg">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-4 sm:space-y-0">
+          <div className="flex items-center space-x-3 sm:space-x-4">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-xl flex items-center justify-center">
+              <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
             <div>
-              <p className="font-semibold text-lg">Need assistance?</p>
-              <p className="text-blue-100">Our experts are standing by to help</p>
+              <p className="font-semibold text-base sm:text-lg">Need assistance?</p>
+              <p className="text-blue-100 text-sm sm:text-base">Our experts are standing by to help</p>
             </div>
           </div>
-          <div className="text-right">
-            <p className="text-2xl font-bold">(888) 401-4221</p>
-            <p className="text-blue-100 text-sm">Available 9 AM - 6 PM EST</p>
+          <div className="text-center sm:text-right">
+            <p className="text-xl sm:text-2xl font-bold">(888) 401-4221</p>
+            <p className="text-blue-100 text-xs sm:text-sm">Available 9 AM - 6 PM EST</p>
           </div>
         </div>
       </div>
@@ -323,15 +323,15 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
       <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
         {/* Enhanced Progress Header */}
         {currentStep < 4 && (
-          <div className="bg-gradient-to-r from-gray-50 to-blue-50 px-8 py-6 border-b border-gray-200">
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">{currentStep}</span>
+          <div className="bg-gradient-to-r from-gray-50 to-blue-50 px-4 sm:px-8 py-4 sm:py-6 border-b border-gray-200">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-2 sm:space-y-0">
+              <div className="flex items-center space-x-2 sm:space-x-3">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-xs sm:text-sm">{currentStep}</span>
                 </div>
-                <span className="text-lg font-semibold text-gray-900">{getProgressText()}</span>
+                <span className="text-base sm:text-lg font-semibold text-gray-900">{getProgressText()}</span>
               </div>
-              <div className="text-sm text-gray-500">
+              <div className="text-xs sm:text-sm text-gray-500">
                 {currentStep === 1 && "Contact Information"}
                 {currentStep === 2 && "Business Details"}
                 {currentStep === 3 && "Verification Documents"}
@@ -344,19 +344,19 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                 {[1, 2, 3].map((step) => (
                   <div key={step} className="flex items-center">
                     <div
-                      className={`w-8 h-8 rounded-full flex items-center justify-center font-semibold text-sm transition-all duration-300 ${
+                      className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center font-semibold text-xs sm:text-sm transition-all duration-300 ${
                         step < currentStep 
                           ? 'bg-green-500 text-white' 
                           : step === currentStep 
-                          ? 'bg-blue-600 text-white ring-4 ring-blue-200' 
+                          ? 'bg-blue-600 text-white ring-2 sm:ring-4 ring-blue-200' 
                           : 'bg-gray-200 text-gray-500'
                       }`}
                     >
-                      {step < currentStep ? <CheckCircle className="w-5 h-5" /> : step}
+                      {step < currentStep ? <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5" /> : step}
                     </div>
                     {step < 3 && (
                       <div 
-                        className={`h-1 w-20 mx-2 rounded-full transition-all duration-500 ${
+                        className={`h-1 w-8 sm:w-20 mx-1 sm:mx-2 rounded-full transition-all duration-500 ${
                           step < currentStep ? 'bg-green-500' : 'bg-gray-200'
                         }`}
                       />
@@ -366,8 +366,8 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
               </div>
               
               {/* Progress Percentage */}
-              <div className="mt-3">
-                <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+              <div className="mt-2 sm:mt-3">
+                <div className="h-1.5 sm:h-2 bg-gray-200 rounded-full overflow-hidden">
                   <div 
                     className="h-full bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full transition-all duration-500 ease-out"
                     style={{ width: `${(currentStep / 3) * 100}%` }}
@@ -381,12 +381,12 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
           </div>
         )}
 
-        <div className="p-10">
-          <div className="text-center mb-10">
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-4">
+        <div className="p-4 sm:p-6 lg:p-10">
+          <div className="text-center mb-6 sm:mb-10">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-3 sm:mb-4">
               {getStepTitle()}
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-base sm:text-lg text-gray-600">
               {currentStep === 1 && "Let's start with your basic business information"}
               {currentStep === 2 && "Tell us about your business location and verification history"}
               {currentStep === 3 && "Upload documents to complete your verification request"}
@@ -396,7 +396,7 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
           {/* Step 1: Lead Capture */}
           {currentStep === 1 && (
             <div className="max-w-2xl mx-auto">
-              <form onSubmit={phase1Form.handleSubmit(submitPhase1)} className="space-y-8">
+              <form onSubmit={phase1Form.handleSubmit(submitPhase1)} className="space-y-6 sm:space-y-8">
                 {/* Honeypot field */}
                 <div className="hidden">
                   <Input
@@ -406,11 +406,11 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                   />
                 </div>
 
-                <div className="grid grid-cols-1 gap-6">
-                  <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-6 border border-gray-200">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <Building2 className="w-6 h-6 text-blue-600" />
-                      <Label htmlFor="businessName" className="text-lg font-semibold text-gray-900">
+                <div className="grid grid-cols-1 gap-4 sm:gap-6">
+                  <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-4 sm:p-6 border border-gray-200">
+                    <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+                      <Building2 className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
+                      <Label htmlFor="businessName" className="text-base sm:text-lg font-semibold text-gray-900">
                         Business name *
                       </Label>
                     </div>
@@ -418,7 +418,7 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                       id="businessName"
                       {...phase1Form.register("businessName")}
                       placeholder="Enter your business name"
-                      className="h-14 text-lg"
+                      className="h-12 sm:h-14 text-base sm:text-lg"
                     />
                     {phase1Form.formState.errors.businessName && (
                       <p className="text-sm text-red-600 mt-2 flex items-center">
@@ -428,10 +428,10 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                     )}
                   </div>
 
-                  <div className="bg-gradient-to-br from-gray-50 to-green-50 rounded-2xl p-6 border border-gray-200">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <Phone className="w-6 h-6 text-green-600" />
-                      <Label htmlFor="phoneNumber" className="text-lg font-semibold text-gray-900">
+                  <div className="bg-gradient-to-br from-gray-50 to-green-50 rounded-2xl p-4 sm:p-6 border border-gray-200">
+                    <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+                      <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-green-600" />
+                      <Label htmlFor="phoneNumber" className="text-base sm:text-lg font-semibold text-gray-900">
                         Phone number (public on Google) *
                       </Label>
                     </div>
@@ -440,7 +440,7 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                       {...phase1Form.register("phoneNumber")}
                       placeholder="(555) 123-4567"
                       type="tel"
-                      className="h-14 text-lg"
+                      className="h-12 sm:h-14 text-base sm:text-lg"
                     />
                     <p className="text-sm text-gray-600 mt-2">This will be displayed on your Google Business Profile</p>
                     {phase1Form.formState.errors.phoneNumber && (
@@ -451,12 +451,12 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                     )}
                   </div>
 
-                  <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-6 border border-gray-200">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-4 sm:p-6 border border-gray-200">
+                    <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+                      <svg className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
                       </svg>
-                      <Label htmlFor="email" className="text-lg font-semibold text-gray-900">
+                      <Label htmlFor="email" className="text-base sm:text-lg font-semibold text-gray-900">
                         Email (Google account or best contact) *
                       </Label>
                     </div>
@@ -465,7 +465,7 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                       {...phase1Form.register("email")}
                       placeholder="you@yourbusiness.com"
                       type="email"
-                      className="h-14 text-lg"
+                      className="h-12 sm:h-14 text-base sm:text-lg"
                     />
                     <p className="text-sm text-gray-600 mt-2">We'll use this to contact you about your verification</p>
                     {phase1Form.formState.errors.email && (
@@ -476,8 +476,8 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                     )}
                   </div>
 
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-200">
-                    <div className="flex items-start space-x-4">
+                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-4 sm:p-6 border border-blue-200">
+                    <div className="flex items-start space-x-3 sm:space-x-4">
                       <Controller
                         name="consent"
                         control={phase1Form.control}
@@ -485,12 +485,12 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                           <Checkbox
                             checked={field.value}
                             onCheckedChange={field.onChange}
-                            className="mt-1 w-5 h-5"
+                            className="mt-1 w-4 h-4 sm:w-5 sm:h-5"
                           />
                         )}
                       />
                       <div className="space-y-2">
-                        <Label className="text-base font-medium text-gray-900">
+                        <Label className="text-sm sm:text-base font-medium text-gray-900">
                           I agree to be contacted about verification and next steps. *
                         </Label>
                         <p className="text-sm text-gray-600">
@@ -510,7 +510,7 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                 <div className="pt-4">
                   <Button 
                     type="submit" 
-                    className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white h-16 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200"
+                    className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white h-14 sm:h-16 text-base sm:text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
@@ -545,30 +545,30 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                     setCurrentStep(3)
                   }
                 }} 
-                className="space-y-8"
+                className="space-y-6 sm:space-y-8"
               >
-                <div className="space-y-6">
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-200">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <MapPin className="w-6 h-6 text-blue-600" />
-                      <Label className="text-lg font-semibold text-gray-900">Business Visibility</Label>
+                <div className="space-y-4 sm:space-y-6">
+                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-4 sm:p-6 border border-blue-200">
+                    <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+                      <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
+                      <Label className="text-base sm:text-lg font-semibold text-gray-900">Business Visibility</Label>
                     </div>
                     
                     <div className="space-y-4">
                       <div>
-                        <Label className="text-base font-medium text-gray-900 mb-3 block">Show address on Google? *</Label>
+                        <Label className="text-sm sm:text-base font-medium text-gray-900 mb-3 block">Show address on Google? *</Label>
                         <Controller
                           name="showAddress"
                           control={phase2Step2Form.control}
                           render={({ field }) => (
-                            <RadioGroup value={field.value} onValueChange={field.onChange} className="flex space-x-8">
-                              <div className="flex items-center space-x-3">
-                                <RadioGroupItem value="yes" id="show-yes" className="w-5 h-5" />
-                                <Label htmlFor="show-yes" className="text-base font-medium cursor-pointer">Yes, show my address</Label>
+                            <RadioGroup value={field.value} onValueChange={field.onChange} className="flex flex-col sm:flex-row sm:space-x-8 space-y-2 sm:space-y-0">
+                              <div className="flex items-center space-x-2 sm:space-x-3">
+                                <RadioGroupItem value="yes" id="show-yes" className="w-4 h-4 sm:w-5 sm:h-5" />
+                                <Label htmlFor="show-yes" className="text-sm sm:text-base font-medium cursor-pointer">Yes, show my address</Label>
                               </div>
-                              <div className="flex items-center space-x-3">
-                                <RadioGroupItem value="no" id="show-no" className="w-5 h-5" />
-                                <Label htmlFor="show-no" className="text-base font-medium cursor-pointer">No, hide my address</Label>
+                              <div className="flex items-center space-x-2 sm:space-x-3">
+                                <RadioGroupItem value="no" id="show-no" className="w-4 h-4 sm:w-5 sm:h-5" />
+                                <Label htmlFor="show-no" className="text-sm sm:text-base font-medium cursor-pointer">No, hide my address</Label>
                               </div>
                             </RadioGroup>
                           )}
@@ -576,7 +576,7 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                       </div>
 
                       <div>
-                        <Label className="text-base font-medium text-gray-900 mb-3 block">Business type *</Label>
+                        <Label className="text-sm sm:text-base font-medium text-gray-900 mb-3 block">Business type *</Label>
                         <Controller
                           name="businessType"
                           control={phase2Step2Form.control}
@@ -599,15 +599,15 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                   </div>
 
                   {(["storefront", "shared", "home"].includes(businessType) || showAddress === "yes") && (
-                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-200">
-                      <div className="flex items-center space-x-3 mb-4">
-                        <Building2 className="w-6 h-6 text-green-600" />
-                        <h4 className="text-lg font-semibold text-gray-900">Physical Address</h4>
+                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-4 sm:p-6 border border-green-200">
+                      <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+                        <Building2 className="w-5 h-5 sm:w-6 sm:h-6 text-green-600" />
+                        <h4 className="text-base sm:text-lg font-semibold text-gray-900">Physical Address</h4>
                       </div>
                       
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="md:col-span-2">
-                          <Label htmlFor="streetAddress" className="text-base font-medium">Street Address</Label>
+                      <div className="grid grid-cols-1 gap-4">
+                        <div>
+                          <Label htmlFor="streetAddress" className="text-sm sm:text-base font-medium">Street Address</Label>
                           <Input
                             id="streetAddress"
                             {...phase2Step2Form.register("streetAddress")}
@@ -617,7 +617,7 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                         </div>
                         
                         <div>
-                          <Label htmlFor="unit" className="text-base font-medium">Unit/Suite (optional)</Label>
+                          <Label htmlFor="unit" className="text-sm sm:text-base font-medium">Unit/Suite (optional)</Label>
                           <Input
                             id="unit"
                             {...phase2Step2Form.register("unit")}
@@ -626,44 +626,46 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                           />
                         </div>
                         
-                        <div>
-                          <Label htmlFor="city" className="text-base font-medium">City</Label>
-                          <Input
-                            id="city"
-                            {...phase2Step2Form.register("city")}
-                            placeholder="Your City"
-                            className="h-12 text-base mt-2"
-                          />
-                        </div>
-                        
-                        <div>
-                          <Label htmlFor="state" className="text-base font-medium">State</Label>
-                          <Input
-                            id="state"
-                            {...phase2Step2Form.register("state")}
-                            placeholder="State"
-                            className="h-12 text-base mt-2"
-                          />
-                        </div>
-                        
-                        <div>
-                          <Label htmlFor="zipCode" className="text-base font-medium">ZIP Code</Label>
-                          <Input
-                            id="zipCode"
-                            {...phase2Step2Form.register("zipCode")}
-                            placeholder="12345"
-                            className="h-12 text-base mt-2"
-                          />
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                          <div>
+                            <Label htmlFor="city" className="text-sm sm:text-base font-medium">City</Label>
+                            <Input
+                              id="city"
+                              {...phase2Step2Form.register("city")}
+                              placeholder="Your City"
+                              className="h-12 text-base mt-2"
+                            />
+                          </div>
+                          
+                          <div>
+                            <Label htmlFor="state" className="text-sm sm:text-base font-medium">State</Label>
+                            <Input
+                              id="state"
+                              {...phase2Step2Form.register("state")}
+                              placeholder="State"
+                              className="h-12 text-base mt-2"
+                            />
+                          </div>
+                          
+                          <div>
+                            <Label htmlFor="zipCode" className="text-sm sm:text-base font-medium">ZIP Code</Label>
+                            <Input
+                              id="zipCode"
+                              {...phase2Step2Form.register("zipCode")}
+                              placeholder="12345"
+                              className="h-12 text-base mt-2"
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
                   )}
 
                   {businessType === "sab" && (
-                    <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-6 border border-purple-200">
-                      <div className="flex items-center space-x-3 mb-4">
-                        <MapPin className="w-6 h-6 text-purple-600" />
-                        <Label htmlFor="serviceArea" className="text-lg font-semibold text-gray-900">Service Area</Label>
+                    <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-4 sm:p-6 border border-purple-200">
+                      <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+                        <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600" />
+                        <Label htmlFor="serviceArea" className="text-base sm:text-lg font-semibold text-gray-900">Service Area</Label>
                       </div>
                       <Textarea
                         id="serviceArea"
@@ -676,27 +678,27 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                     </div>
                   )}
 
-                  <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 border border-orange-200">
-                    <div className="flex items-center space-x-3 mb-6">
-                      <AlertCircle className="w-6 h-6 text-orange-600" />
-                      <h4 className="text-lg font-semibold text-gray-900">Verification History</h4>
+                  <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-4 sm:p-6 border border-orange-200">
+                    <div className="flex items-center space-x-2 sm:space-x-3 mb-4 sm:mb-6">
+                      <AlertCircle className="w-5 h-5 sm:w-6 sm:h-6 text-orange-600" />
+                      <h4 className="text-base sm:text-lg font-semibold text-gray-900">Verification History</h4>
                     </div>
                     
-                    <div className="space-y-6">
+                    <div className="space-y-4 sm:space-y-6">
                       <div>
-                        <Label className="text-base font-medium text-gray-900 mb-3 block">Attempted video verification before? *</Label>
+                        <Label className="text-sm sm:text-base font-medium text-gray-900 mb-3 block">Attempted video verification before? *</Label>
                         <Controller
                           name="attemptedVideoVerification"
                           control={phase2Step2Form.control}
                           render={({ field }) => (
-                            <RadioGroup value={field.value} onValueChange={field.onChange} className="flex space-x-8">
-                              <div className="flex items-center space-x-3">
-                                <RadioGroupItem value="yes" id="video-yes" className="w-5 h-5" />
-                                <Label htmlFor="video-yes" className="text-base font-medium cursor-pointer">Yes</Label>
+                            <RadioGroup value={field.value} onValueChange={field.onChange} className="flex flex-col sm:flex-row sm:space-x-8 space-y-2 sm:space-y-0">
+                              <div className="flex items-center space-x-2 sm:space-x-3">
+                                <RadioGroupItem value="yes" id="video-yes" className="w-4 h-4 sm:w-5 sm:h-5" />
+                                <Label htmlFor="video-yes" className="text-sm sm:text-base font-medium cursor-pointer">Yes</Label>
                               </div>
-                              <div className="flex items-center space-x-3">
-                                <RadioGroupItem value="no" id="video-no" className="w-5 h-5" />
-                                <Label htmlFor="video-no" className="text-base font-medium cursor-pointer">No</Label>
+                              <div className="flex items-center space-x-2 sm:space-x-3">
+                                <RadioGroupItem value="no" id="video-no" className="w-4 h-4 sm:w-5 sm:h-5" />
+                                <Label htmlFor="video-no" className="text-sm sm:text-base font-medium cursor-pointer">No</Label>
                               </div>
                             </RadioGroup>
                           )}
@@ -704,19 +706,19 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                       </div>
 
                       <div>
-                        <Label className="text-base font-medium text-gray-900 mb-3 block">Is this phone number used on any other profiles (past/present)? *</Label>
+                        <Label className="text-sm sm:text-base font-medium text-gray-900 mb-3 block">Is this phone number used on any other profiles (past/present)? *</Label>
                         <Controller
                           name="phoneUsedElsewhere"
                           control={phase2Step2Form.control}
                           render={({ field }) => (
-                            <RadioGroup value={field.value} onValueChange={field.onChange} className="flex space-x-8">
-                              <div className="flex items-center space-x-3">
-                                <RadioGroupItem value="yes" id="phone-yes" className="w-5 h-5" />
-                                <Label htmlFor="phone-yes" className="text-base font-medium cursor-pointer">Yes</Label>
+                            <RadioGroup value={field.value} onValueChange={field.onChange} className="flex flex-col sm:flex-row sm:space-x-8 space-y-2 sm:space-y-0">
+                              <div className="flex items-center space-x-2 sm:space-x-3">
+                                <RadioGroupItem value="yes" id="phone-yes" className="w-4 h-4 sm:w-5 sm:h-5" />
+                                <Label htmlFor="phone-yes" className="text-sm sm:text-base font-medium cursor-pointer">Yes</Label>
                               </div>
-                              <div className="flex items-center space-x-3">
-                                <RadioGroupItem value="no" id="phone-no" className="w-5 h-5" />
-                                <Label htmlFor="phone-no" className="text-base font-medium cursor-pointer">No</Label>
+                              <div className="flex items-center space-x-2 sm:space-x-3">
+                                <RadioGroupItem value="no" id="phone-no" className="w-4 h-4 sm:w-5 sm:h-5" />
+                                <Label htmlFor="phone-no" className="text-sm sm:text-base font-medium cursor-pointer">No</Label>
                               </div>
                             </RadioGroup>
                           )}
@@ -724,19 +726,19 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                       </div>
 
                       <div>
-                        <Label className="text-base font-medium text-gray-900 mb-3 block">Previously submitted a reinstatement request? *</Label>
+                        <Label className="text-sm sm:text-base font-medium text-gray-900 mb-3 block">Previously submitted a reinstatement request? *</Label>
                         <Controller
                           name="submittedReinstatement"
                           control={phase2Step2Form.control}
                           render={({ field }) => (
-                            <RadioGroup value={field.value} onValueChange={field.onChange} className="flex space-x-8">
-                              <div className="flex items-center space-x-3">
-                                <RadioGroupItem value="yes" id="reinstatement-yes" className="w-5 h-5" />
-                                <Label htmlFor="reinstatement-yes" className="text-base font-medium cursor-pointer">Yes</Label>
+                            <RadioGroup value={field.value} onValueChange={field.onChange} className="flex flex-col sm:flex-row sm:space-x-8 space-y-2 sm:space-y-0">
+                              <div className="flex items-center space-x-2 sm:space-x-3">
+                                <RadioGroupItem value="yes" id="reinstatement-yes" className="w-4 h-4 sm:w-5 sm:h-5" />
+                                <Label htmlFor="reinstatement-yes" className="text-sm sm:text-base font-medium cursor-pointer">Yes</Label>
                               </div>
-                              <div className="flex items-center space-x-3">
-                                <RadioGroupItem value="no" id="reinstatement-no" className="w-5 h-5" />
-                                <Label htmlFor="reinstatement-no" className="text-base font-medium cursor-pointer">No</Label>
+                              <div className="flex items-center space-x-2 sm:space-x-3">
+                                <RadioGroupItem value="no" id="reinstatement-no" className="w-4 h-4 sm:w-5 sm:h-5" />
+                                <Label htmlFor="reinstatement-no" className="text-sm sm:text-base font-medium cursor-pointer">No</Label>
                               </div>
                             </RadioGroup>
                           )}
@@ -745,7 +747,7 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
 
                       {submittedReinstatement === "yes" && (
                         <div className="bg-white rounded-xl p-4 border border-orange-200">
-                          <Label htmlFor="reinstatementDetails" className="text-base font-medium text-gray-900">
+                          <Label htmlFor="reinstatementDetails" className="text-sm sm:text-base font-medium text-gray-900">
                             Date and case number (if available)
                           </Label>
                           <Textarea
@@ -761,7 +763,7 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                   </div>
                 </div>
 
-                <div className="flex space-x-4 pt-4">
+                <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
                   <Button
                     type="button"
                     variant="outline"
@@ -894,7 +896,7 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                 </div>
               </div>
 
-              <div className="flex space-x-4">
+              <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
                 <Button
                   type="button"
                   variant="outline"
@@ -917,31 +919,31 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
 
           {/* Step 4: Success */}
           {currentStep === 4 && (
-            <div className="text-center space-y-8">
+            <div className="text-center space-y-6 sm:space-y-8">
               <div className="relative">
-                <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto shadow-lg">
-                  <CheckCircle className="w-12 h-12 text-white" />
+                <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                  <CheckCircle className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-white" />
+                <div className="absolute -top-2 -right-2 w-6 h-6 sm:w-8 sm:h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                  <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </div>
               </div>
               
-              <div className="space-y-6">
-                <div className="space-y-3">
-                  <h3 className="text-2xl font-bold text-gray-900">
+              <div className="space-y-4 sm:space-y-6">
+                <div className="space-y-2 sm:space-y-3">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
                     Verification Request Submitted Successfully!
                   </h3>
-                  <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+                  <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
                     Thank you! We've received your verification details and will begin processing your request immediately. 
                     Our expert team will review your information and contact you within 1-2 business days.
                   </p>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-6">
+                <div className="grid grid-cols-1 gap-4 max-w-2xl mx-auto">
+                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-4 sm:p-6">
                     <div className="flex items-start space-x-3">
-                      <Clock className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                      <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 flex-shrink-0 mt-1" />
                       <div className="text-left">
                         <p className="font-semibold text-gray-900 mb-2">Next 24-48 Hours</p>
                         <ul className="text-sm text-gray-700 space-y-1">
@@ -953,9 +955,9 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                     </div>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-xl p-6">
+                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-xl p-4 sm:p-6">
                     <div className="flex items-start space-x-3">
-                      <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+                      <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-600 flex-shrink-0 mt-1" />
                       <div className="text-left">
                         <p className="font-semibold text-gray-900 mb-2">Ongoing Support</p>
                         <ul className="text-sm text-gray-700 space-y-1">
@@ -968,13 +970,13 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-6 border border-gray-200">
-                  <div className="flex items-center justify-center space-x-4 mb-4">
-                    <Phone className="w-6 h-6 text-blue-600" />
+                <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-4 sm:p-6 border border-gray-200">
+                  <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4 mb-4">
+                    <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
                     <div className="text-center">
                       <p className="font-semibold text-gray-900">Need immediate assistance?</p>
-                      <p className="text-2xl font-bold text-blue-600">(888) 401-4221</p>
-                      <p className="text-sm text-gray-600">Monday - Friday, 9 AM - 6 PM EST</p>
+                      <p className="text-xl sm:text-2xl font-bold text-blue-600">(888) 401-4221</p>
+                      <p className="text-xs sm:text-sm text-gray-600">Monday - Friday, 9 AM - 6 PM EST</p>
                     </div>
                   </div>
                 </div>
@@ -984,16 +986,16 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                 {onClose && (
                   <Button
                     onClick={onClose}
-                    className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-3 rounded-xl font-semibold shadow-lg"
+                    className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 sm:px-8 py-3 rounded-xl font-semibold shadow-lg"
                   >
                     Continue Browsing
                   </Button>
                 )}
-                <div className="flex items-center justify-center space-x-4 text-xs text-gray-400">
+                <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4 text-xs text-gray-400">
                   <span>Secure & Confidential</span>
-                  <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+                  <div className="hidden sm:block w-1 h-1 bg-gray-400 rounded-full"></div>
                   <span>GDPR Compliant</span>
-                  <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+                  <div className="hidden sm:block w-1 h-1 bg-gray-400 rounded-full"></div>
                   <span>SSL Protected</span>
                 </div>
               </div>
