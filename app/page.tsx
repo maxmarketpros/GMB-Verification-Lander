@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import { VerificationSection } from "@/components/verification-section"
 import { useState } from "react"
 
 export default function GoogleBusinessProfilePage() {
@@ -123,6 +124,12 @@ export default function GoogleBusinessProfilePage() {
               >
                 FAQ
               </button>
+              <button
+                onClick={() => scrollToSection("get-verified")}
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                Get Verified
+              </button>
             </nav>
 
             <div className="flex items-center space-x-3">
@@ -132,7 +139,10 @@ export default function GoogleBusinessProfilePage() {
               >
                 <a href="tel:+18884014221">Call Now: (888) 401-4221</a>
               </Button>
-              <Button className="hidden sm:flex bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium">
+              <Button 
+                onClick={() => scrollToSection("get-verified")}
+                className="hidden sm:flex bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium"
+              >
                 Get Verified Now
               </Button>
 
@@ -179,13 +189,22 @@ export default function GoogleBusinessProfilePage() {
                 >
                   FAQ
                 </button>
+                <button
+                  onClick={() => scrollToSection("get-verified")}
+                  className="text-gray-700 hover:text-blue-600 font-medium px-2 py-1 text-left"
+                >
+                  Get Verified
+                </button>
                 <Button
                   asChild
                   className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium mx-2 mt-2"
                 >
                   <a href="tel:+18884014221">Call Now: (888) 401-4221</a>
                 </Button>
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium mx-2">
+                <Button 
+                  onClick={() => scrollToSection("get-verified")}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium mx-2"
+                >
                   Get Verified Now
                 </Button>
               </nav>
@@ -212,6 +231,7 @@ export default function GoogleBusinessProfilePage() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
+                  onClick={() => scrollToSection("get-verified")}
                   size="lg"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-base font-medium shadow-sm hover:shadow-md transition-all duration-200"
                 >
@@ -305,13 +325,19 @@ export default function GoogleBusinessProfilePage() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
           <Button
+            onClick={() => scrollToSection("get-verified")}
             size="lg"
             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-base font-medium shadow-sm hover:shadow-md transition-all duration-200"
           >
             Get Verified Today
           </Button>
-          <Button className="hidden sm:flex bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium">
-            Start Verification
+          <Button 
+            asChild
+            variant="outline"
+            size="lg"
+            className="border-border text-foreground hover:bg-muted px-8 py-4 rounded-lg text-base font-medium bg-transparent"
+          >
+            <a href="tel:+18884014221">Call Now: (888) 401-4221</a>
           </Button>
         </div>
       </section>
@@ -371,8 +397,13 @@ export default function GoogleBusinessProfilePage() {
             >
               Get Verified Today
             </Button>
-            <Button className="hidden sm:flex bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium">
-              Start Verification
+            <Button 
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-border text-foreground hover:bg-muted px-8 py-4 rounded-lg text-base font-medium bg-transparent"
+            >
+              <a href="tel:+18884014221">Call Now: (888) 401-4221</a>
             </Button>
           </div>
         </div>
@@ -701,7 +732,10 @@ export default function GoogleBusinessProfilePage() {
             <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
               Our proven verification process gets your Google Business Profile verified quickly and efficiently.
             </p>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-base font-medium">
+            <Button 
+              onClick={() => scrollToSection("get-verified")}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-base font-medium"
+            >
               Start Verification
             </Button>
           </div>
@@ -846,6 +880,9 @@ export default function GoogleBusinessProfilePage() {
           </div>
         </div>
       </section>
+
+      {/* Verification Section */}
+      <VerificationSection />
     </div>
   )
 }

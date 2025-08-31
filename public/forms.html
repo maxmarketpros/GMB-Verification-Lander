@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netlify Forms</title>
+</head>
+<body>
+  <!-- Hidden forms for Netlify form detection -->
+  
+  <!-- Phase 1 Lead Capture Form -->
+  <form name="verification-lead-capture" netlify hidden>
+    <input type="text" name="lead-id" />
+    <input type="text" name="business-name" />
+    <input type="tel" name="phone-number" />
+    <input type="email" name="email" />
+    <input type="checkbox" name="consent" />
+  </form>
+
+  <!-- Phase 2 Detailed Information Form -->
+  <form name="verification-details" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="lead-id" />
+    
+    <!-- Step 2 fields -->
+    <select name="show-address">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <select name="business-type">
+      <option value="storefront">Storefront</option>
+      <option value="sab">Service-Area Business</option>
+      <option value="shared">Shared / Co-working</option>
+      <option value="home">Home office</option>
+    </select>
+    <input type="text" name="street-address" />
+    <input type="text" name="unit" />
+    <input type="text" name="city" />
+    <input type="text" name="state" />
+    <input type="text" name="zip-code" />
+    <textarea name="service-area"></textarea>
+    <select name="attempted-video-verification">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <select name="phone-used-elsewhere">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <select name="submitted-reinstatement">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <textarea name="reinstatement-details"></textarea>
+    
+    <!-- Step 3 fields -->
+    <input type="file" name="business-document-0" />
+    <input type="file" name="business-document-1" />
+    <input type="file" name="business-document-2" />
+    <input type="file" name="business-document-3" />
+    <input type="file" name="business-document-4" />
+    <input type="file" name="signage-photo-0" />
+    <input type="file" name="signage-photo-1" />
+    <input type="file" name="signage-photo-2" />
+    <input type="file" name="signage-photo-3" />
+    <input type="file" name="signage-photo-4" />
+    <textarea name="notes"></textarea>
+    <input type="checkbox" name="accuracy-confirmation" />
+    <input type="checkbox" name="eligibility-confirmation" />
+    
+    <!-- Honeypot field -->
+    <input type="text" name="bot-field" />
+  </form>
+</body>
+</html>
