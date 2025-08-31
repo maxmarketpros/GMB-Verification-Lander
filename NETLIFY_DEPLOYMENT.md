@@ -67,6 +67,10 @@ If you have any environment variables, add them in:
 - Ensure all dependencies are in `package.json`
 - Verify Node version compatibility
 
+### File API Errors
+- If you see "File is not defined" errors, ensure all file validation uses client-side checks
+- The project includes proper SSR-safe file validation that skips validation during server-side rendering
+
 ### Images Not Loading
 - Ensure all images are in the `public` folder
 - Use relative paths starting with `/`

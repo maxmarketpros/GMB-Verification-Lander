@@ -36,6 +36,12 @@ const phase1Schema = z.object({
   website: z.string().max(0, "This field should be empty")
 })
 
+// File validation helper for client-side only
+const validateFiles = (files: any[]) => {
+  if (typeof window === 'undefined') return true // Skip validation during SSR
+  return files.every(file => file instanceof File)
+}
+
 const phase2Step2Schema = z.object({
   showAddress: z.enum(["yes", "no"]),
   businessType: z.enum(["storefront", "sab", "shared", "home"]),
@@ -52,8 +58,8 @@ const phase2Step2Schema = z.object({
 })
 
 const phase2Step3Schema = z.object({
-  businessDocuments: z.array(z.instanceof(File)).min(1, "Business documents are required"),
-  signagePhotos: z.array(z.instanceof(File)).optional(),
+  businessDocuments: z.array(z.any()).min(1, "Business documents are required").refine(validateFiles, "Please select valid files"),
+  signagePhotos: z.array(z.any()).optional().refine(files => !files || validateFiles(files), "Please select valid files"),
   notes: z.string().optional(),
   accuracyConfirmation: z.boolean().refine(val => val === true, "You must confirm accuracy"),
   eligibilityConfirmation: z.boolean().refine(val => val === true, "You must confirm eligibility understanding")
