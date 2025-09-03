@@ -267,7 +267,7 @@ export default function GoogleBusinessProfilePage() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-3xl transform rotate-3"></div>
                 <img
-                  src="/google-verification-success.png"
+                  src="/google-verification-success - Edited.png"
                   alt="Google Business Profile verification success notification"
                   className="relative w-full max-w-lg h-auto rounded-2xl shadow-2xl border border-border"
                 />
@@ -381,17 +381,18 @@ export default function GoogleBusinessProfilePage() {
 
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <img
-                  src="/google-mobile-profile.webp"
-                  alt="Mobile phone showing verified Google Business Profile"
-                  className="w-full max-w-md h-auto rounded-2xl shadow-lg"
-                />
+                                 <img
+                   src="/google-mobile-profile - Edited.jpg"
+                   alt="Mobile phone showing verified Google Business Profile"
+                   className="w-full max-w-md h-auto rounded-2xl shadow-lg"
+                 />
               </div>
             </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-16">
             <Button
+              onClick={() => scrollToSection("get-verified")}
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-base font-medium shadow-sm hover:shadow-md transition-all duration-200"
             >
@@ -463,6 +464,7 @@ export default function GoogleBusinessProfilePage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-16">
             <Button
+              onClick={() => scrollToSection("get-verified")}
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-base font-medium shadow-sm hover:shadow-md transition-all duration-200"
             >
@@ -641,6 +643,7 @@ export default function GoogleBusinessProfilePage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-16">
             <Button
+              onClick={() => scrollToSection("get-verified")}
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-base font-medium shadow-sm hover:shadow-md transition-all duration-200"
             >
@@ -712,6 +715,7 @@ export default function GoogleBusinessProfilePage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-16">
             <Button
+              onClick={() => scrollToSection("get-verified")}
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-base font-medium shadow-sm hover:shadow-md transition-all duration-200"
             >
@@ -865,6 +869,7 @@ export default function GoogleBusinessProfilePage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-16">
             <Button
+              onClick={() => scrollToSection("get-verified")}
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-base font-medium shadow-sm hover:shadow-md transition-all duration-200"
             >
