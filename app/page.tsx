@@ -219,9 +219,9 @@ export default function GoogleBusinessProfilePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8 lg:space-y-10">
               <div className="space-y-6">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-foreground leading-tight tracking-tight">
-                  Get your <span className="text-blue-600 font-medium">Google Business Profile</span> verified fast
-                </h1>
+                                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-foreground leading-tight tracking-tight">
+                   Get your <span className="text-blue-600 font-medium">Google Business Profile</span> verified
+                 </h1>
 
                 <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-lg font-normal">
                   Professional Google Business Profile verification service. Get found on Google Search and Maps with
