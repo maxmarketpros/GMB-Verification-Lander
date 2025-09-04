@@ -14,7 +14,17 @@ export default function GoogleBusinessProfilePage() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      // On mobile, if scrolling to get-verified section, scroll to the form instead
+      if (sectionId === "get-verified" && window.innerWidth < 768) {
+        const formElement = document.getElementById("verification-form")
+        if (formElement) {
+          formElement.scrollIntoView({ behavior: "smooth" })
+        } else {
+          element.scrollIntoView({ behavior: "smooth" })
+        }
+      } else {
+        element.scrollIntoView({ behavior: "smooth" })
+      }
     }
     setMobileMenuOpen(false) // Close mobile menu after clicking
   }

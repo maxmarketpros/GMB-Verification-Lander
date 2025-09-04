@@ -300,7 +300,7 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6" id="verification-form">
       {/* Help Banner */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8 shadow-lg">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-4 sm:space-y-0">
