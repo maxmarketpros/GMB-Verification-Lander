@@ -173,9 +173,9 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
       formData.append("lead-id", leadId)
       
       // Phase 1 data (from first form) - at the top
-      formData.append("business-name", phase1Data.businessName)
-      formData.append("phone-number", phase1Data.phoneNumber)
-      formData.append("email", phase1Data.email)
+      formData.append("phase1-business-name", phase1Data.businessName)
+      formData.append("phase1-phone-number", phase1Data.phoneNumber)
+      formData.append("phase1-email", phase1Data.email)
       
       // Step 2 data
       formData.append("show-address", step2Data.showAddress)
