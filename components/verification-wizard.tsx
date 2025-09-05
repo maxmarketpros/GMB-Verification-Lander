@@ -78,7 +78,7 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
   const [currentStep, setCurrentStep] = useState(1)
   const [isTransitioning, setIsTransitioning] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [leadId] = useState(() => `lead_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`)
+  const [leadId, setLeadId] = useState(() => `lead_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`)
   const [phase1Submitted, setPhase1Submitted] = useState(false)
   const [phase2Submitted, setPhase2Submitted] = useState(false)
 
@@ -128,10 +128,15 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
     setIsSubmitting(true)
     
     try {
+      // Create new lead ID using business name
+      const sanitizedBusinessName = data.businessName.toLowerCase().replace(/[^a-z0-9]/g, '').substring(0, 20)
+      const newLeadId = `lead_${Date.now()}_${sanitizedBusinessName}`
+      setLeadId(newLeadId)
+      
       // Create form data for Netlify
       const formData = new FormData()
       formData.append("form-name", "verification-lead-capture")
-      formData.append("lead-id", leadId)
+      formData.append("lead-id", newLeadId)
       formData.append("business-name", data.businessName)
       formData.append("phone-number", data.phoneNumber)
       formData.append("email", data.email)
