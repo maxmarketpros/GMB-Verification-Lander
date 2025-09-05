@@ -163,6 +163,7 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
   const submitPhase2 = async () => {
     const step2Data = phase2Step2Form.getValues()
     const step3Data = phase2Step3Form.getValues()
+    const phase1Data = phase1Form.getValues()
     
     setIsSubmitting(true)
 
@@ -170,6 +171,11 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
       const formData = new FormData()
       formData.append("form-name", "verification-details")
       formData.append("lead-id", leadId)
+      
+      // Phase 1 data (from first form) - at the top
+      formData.append("business-name", phase1Data.businessName)
+      formData.append("phone-number", phase1Data.phoneNumber)
+      formData.append("email", phase1Data.email)
       
       // Step 2 data
       formData.append("show-address", step2Data.showAddress)
