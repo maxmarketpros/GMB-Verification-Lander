@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { VerificationSection } from "@/components/verification-section"
 import { useState } from "react"
+import { trackPhoneCall } from "@/lib/gtag"
 
 export default function GoogleBusinessProfilePage() {
   const [activeTab, setActiveTab] = useState("essential-info")
@@ -147,7 +148,7 @@ export default function GoogleBusinessProfilePage() {
                 asChild
                 className="hidden sm:flex bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium"
               >
-                <a href="tel:+18884014221">Call Now: (888) 401-4221</a>
+                <a href="tel:+18884014221" onClick={trackPhoneCall}>Call Now: (888) 401-4221</a>
               </Button>
               <Button 
                 onClick={() => scrollToSection("get-verified")}
@@ -209,7 +210,7 @@ export default function GoogleBusinessProfilePage() {
                   asChild
                   className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium mx-2 mt-2"
                 >
-                  <a href="tel:+18884014221">Call Now: (888) 401-4221</a>
+                  <a href="tel:+18884014221" onClick={trackPhoneCall}>Call Now: (888) 401-4221</a>
                 </Button>
                 <Button 
                   onClick={() => scrollToSection("get-verified")}
@@ -253,7 +254,7 @@ export default function GoogleBusinessProfilePage() {
                   size="lg"
                   className="border-border text-foreground hover:bg-muted px-8 py-4 rounded-lg text-base font-medium bg-transparent"
                 >
-                  <a href="tel:+18884014221">Call: (888) 401-4221</a>
+                  <a href="tel:+18884014221" onClick={trackPhoneCall}>Call: (888) 401-4221</a>
                 </Button>
               </div>
 
@@ -347,7 +348,7 @@ export default function GoogleBusinessProfilePage() {
             size="lg"
             className="border-border text-foreground hover:bg-muted px-8 py-4 rounded-lg text-base font-medium bg-transparent"
           >
-            <a href="tel:+18884014221">Call Now: (888) 401-4221</a>
+            <a href="tel:+18884014221" onClick={trackPhoneCall}>Call Now: (888) 401-4221</a>
           </Button>
         </div>
       </section>
@@ -414,7 +415,7 @@ export default function GoogleBusinessProfilePage() {
               size="lg"
               className="border-border text-foreground hover:bg-muted px-8 py-4 rounded-lg text-base font-medium bg-transparent"
             >
-              <a href="tel:+18884014221">Call Now: (888) 401-4221</a>
+              <a href="tel:+18884014221" onClick={trackPhoneCall}>Call Now: (888) 401-4221</a>
             </Button>
           </div>
         </div>
@@ -481,7 +482,7 @@ export default function GoogleBusinessProfilePage() {
               Get Verified Today
             </Button>
             <Button asChild variant="outline" size="lg">
-              <a href="tel:+18884014221">Call: (888) 401-4221</a>
+              <a href="tel:+18884014221" onClick={trackPhoneCall}>Call: (888) 401-4221</a>
             </Button>
           </div>
         </div>
@@ -529,7 +530,7 @@ export default function GoogleBusinessProfilePage() {
                         Get Verified Today
                       </Button>
                       <Button asChild variant="outline" size="sm">
-                        <a href="tel:+18884014221">Call: (888) 401-4221</a>
+                        <a href="tel:+18884014221" onClick={trackPhoneCall}>Call: (888) 401-4221</a>
                       </Button>
                     </div>
                   </div>
@@ -608,7 +609,7 @@ export default function GoogleBusinessProfilePage() {
                         Get Verified Today
                       </Button>
                       <Button asChild variant="outline" size="sm">
-                        <a href="tel:+18884014221">Call: (888) 401-4221</a>
+                        <a href="tel:+18884014221" onClick={trackPhoneCall}>Call: (888) 401-4221</a>
                       </Button>
                     </div>
                   </div>
@@ -660,7 +661,7 @@ export default function GoogleBusinessProfilePage() {
               Get Verified Today
             </Button>
             <Button asChild variant="outline" size="lg">
-              <a href="tel:+18884014221">Call: (888) 401-4221</a>
+              <a href="tel:+18884014221" onClick={trackPhoneCall}>Call: (888) 401-4221</a>
             </Button>
           </div>
         </div>
@@ -732,7 +733,7 @@ export default function GoogleBusinessProfilePage() {
               Get Verified Today
             </Button>
             <Button asChild variant="outline" size="lg">
-              <a href="tel:+18884014221">Call: (888) 401-4221</a>
+              <a href="tel:+18884014221" onClick={trackPhoneCall}>Call: (888) 401-4221</a>
             </Button>
           </div>
         </div>
@@ -890,7 +891,7 @@ export default function GoogleBusinessProfilePage() {
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-base font-medium shadow-sm hover:shadow-md transition-all duration-200"
             >
-              <a href="tel:+18884014221">Call Now</a>
+              <a href="tel:+18884014221" onClick={trackPhoneCall}>Call Now</a>
             </Button>
           </div>
         </div>

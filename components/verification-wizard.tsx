@@ -12,6 +12,7 @@ import { FileUpload } from "@/components/ui/file-upload"
 import { useForm, Controller } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
+import { trackPhoneCall } from "@/lib/gtag"
 import { 
   CheckCircle, 
   ArrowLeft, 
@@ -214,7 +215,10 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
       })
 
       setPhase2Submitted(true)
-      setCurrentStep(4) // Success state
+      // Redirect to thank-you page
+      if (typeof window !== 'undefined') {
+        window.location.href = '/thank-you'
+      }
 
     } catch (error) {
       console.error("Error submitting Phase 2:", error)
@@ -325,7 +329,11 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
             </div>
           </div>
           <div className="text-center sm:text-right">
-            <p className="text-xl sm:text-2xl font-bold">(888) 401-4221</p>
+            <p className="text-xl sm:text-2xl font-bold">
+              <a href="tel:+18884014221" onClick={trackPhoneCall} className="hover:text-blue-200 transition-colors">
+                (888) 401-4221
+              </a>
+            </p>
             <p className="text-blue-100 text-xs sm:text-sm">Available 9 AM - 6 PM EST</p>
           </div>
         </div>
@@ -1008,7 +1016,11 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                     <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
                     <div className="text-center">
                       <p className="font-semibold text-gray-900">Need immediate assistance?</p>
-                      <p className="text-xl sm:text-2xl font-bold text-blue-600">(888) 401-4221</p>
+                      <p className="text-xl sm:text-2xl font-bold text-blue-600">
+                        <a href="tel:+18884014221" onClick={trackPhoneCall} className="hover:text-blue-700 transition-colors">
+                          (888) 401-4221
+                        </a>
+                      </p>
                       <p className="text-xs sm:text-sm text-gray-600">Monday - Friday, 9 AM - 6 PM EST</p>
                     </div>
                   </div>
