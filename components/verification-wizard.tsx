@@ -205,7 +205,8 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
       // Submit to Netlify
       await fetch("/", {
         method: "POST",
-        body: formData
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString()
       })
 
       setPhase2Submitted(true)
