@@ -43,6 +43,7 @@ const validateFiles = (files: any[]) => {
 }
 
 const phase2Step2Schema = z.object({
+  legalBusinessName: z.string().min(1, "Legal business name is required"),
   showAddress: z.enum(["yes", "no"]),
   businessType: z.enum(["storefront", "sab", "shared", "home"]),
   streetAddress: z.string().optional(),
@@ -97,6 +98,7 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
   const phase2Step2Form = useForm<Phase2Step2Data>({
     resolver: zodResolver(phase2Step2Schema),
     defaultValues: {
+      legalBusinessName: "",
       showAddress: "yes",
       businessType: "storefront",
       attemptedVideoVerification: "no",
@@ -172,10 +174,8 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
       formData.append("form-name", "verification-details")
       formData.append("lead-id", leadId)
       
-      // Phase 1 data (from first form) - at the top
-      formData.append("phase1-business-name", phase1Data.businessName)
-      formData.append("phase1-phone-number", phase1Data.phoneNumber)
-      formData.append("phase1-email", phase1Data.email)
+      // Legal business name (from step 2) - at the top
+      formData.append("legal-business-name", step2Data.legalBusinessName)
       
       // Step 2 data
       formData.append("show-address", step2Data.showAddress)
@@ -554,6 +554,28 @@ export function VerificationWizard({ onClose }: VerificationWizardProps = {}) {
                 className="space-y-6 sm:space-y-8"
               >
                 <div className="space-y-4 sm:space-y-6">
+                  <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-4 sm:p-6 border border-gray-200">
+                    <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+                      <Building2 className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
+                      <Label htmlFor="legalBusinessName" className="text-base sm:text-lg font-semibold text-gray-900">
+                        Legal Business Name *
+                      </Label>
+                    </div>
+                    <Input
+                      id="legalBusinessName"
+                      {...phase2Step2Form.register("legalBusinessName")}
+                      placeholder="Enter your legal business name"
+                      className="h-12 sm:h-14 text-base sm:text-lg"
+                    />
+                    <p className="text-sm text-gray-600 mt-2">This should match your business registration or license</p>
+                    {phase2Step2Form.formState.errors.legalBusinessName && (
+                      <p className="text-sm text-red-600 mt-2 flex items-center">
+                        <AlertCircle className="w-4 h-4 mr-1" />
+                        {phase2Step2Form.formState.errors.legalBusinessName.message}
+                      </p>
+                    )}
+                  </div>
+
                   <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-4 sm:p-6 border border-blue-200">
                     <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
                       <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
